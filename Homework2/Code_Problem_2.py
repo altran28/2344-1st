@@ -4,18 +4,14 @@ Code Problem 2"""
 
 month_list = {"january": "1", "february": "2", "march": "3", "april": "4", "may": "5", "june": "6", "july": "7",
               "august": "8", "september": "9", "october": "10", "november": "11", "december": "12"}
-
 i = 0
-list1 = []
 list2 = []
 list3 = []
 
-while True:
-    user_input = input()
-    if user_input == "-1":
-        break
-    list1.append(user_input)
-list1.append("-1")
+with open("inputDates.txt", "r") as file:
+    list1 = []
+    for line in file:
+        list1.append(line.strip())
 
 while list1[i] != "-1":
     new_lis = list1[i].split(" ")
